@@ -1,5 +1,7 @@
 ![logo](./images/logo.png)
 
+---
+
 This repo contains source code for the paper:
 **Non-iterative Scribble-Supervised Learning for Medical Image Segmentation.** October, 2022. [[arXiv]](https://arxiv.org/pdf/2210.10956.pdf)
 
