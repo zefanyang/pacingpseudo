@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f56e031-1ce4-4b4f-afa8-c2f109cd2201" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +34,7 @@
       <updated>1668261451166</updated>
       <workItem from="1668261453155" duration="2000" />
       <workItem from="1670835571254" duration="2000" />
-      <workItem from="1677306131351" duration="368000" />
+      <workItem from="1677306131351" duration="1240000" />
     </task>
     <servers />
   </component>
@@ -43,10 +42,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="178" key="#Deployment" timestamp="1677306342671">
+    <state x="552" y="178" key="#Deployment" timestamp="1677593578241">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="178" key="#Deployment/3840.0.1920.1040/1920.0.1858.1080/0.0.1920.1040@0.0.1920.1040" timestamp="1677306342671" />
+    <state x="552" y="178" key="#Deployment/3840.0.1920.1040/1920.0.1858.1080/0.0.1920.1040@0.0.1920.1040" timestamp="1677593578241" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1677306486177">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
