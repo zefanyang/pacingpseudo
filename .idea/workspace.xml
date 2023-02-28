@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2f56e031-1ce4-4b4f-afa8-c2f109cd2201" name="Default Changelist" comment="" />
+    <list default="true" id="2f56e031-1ce4-4b4f-afa8-c2f109cd2201" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,7 +22,10 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="2f56e031-1ce4-4b4f-afa8-c2f109cd2201" name="Default Changelist" comment="" />
@@ -29,7 +35,37 @@
       <updated>1668261451166</updated>
       <workItem from="1668261453155" duration="2000" />
       <workItem from="1670835571254" duration="2000" />
+      <workItem from="1677306131351" duration="368000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="178" key="#Deployment" timestamp="1677306342671">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#Deployment/3840.0.1920.1040/1920.0.1858.1080/0.0.1920.1040@0.0.1920.1040" timestamp="1677306342671" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1677306486177">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/3840.0.1920.1040/1920.0.1858.1080/0.0.1920.1040@0.0.1920.1040" timestamp="1677306486177" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1677306500512">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="165" key="SettingsEditor/3840.0.1920.1040/1920.0.1858.1080/0.0.1920.1040@0.0.1920.1040" timestamp="1677306500512" />
+    <state x="771" y="405" key="com.jetbrains.plugins.remotesdk.ui.RemoteMappingsConfiguration" timestamp="1677306499343">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="771" y="405" key="com.jetbrains.plugins.remotesdk.ui.RemoteMappingsConfiguration/3840.0.1920.1040/1920.0.1858.1080/0.0.1920.1040@0.0.1920.1040" timestamp="1677306499343" />
+    <state x="845" y="250" width="572" height="539" key="ftp.server.browser" timestamp="1677306498270">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="845" y="250" width="572" height="539" key="ftp.server.browser/3840.0.1920.1040/1920.0.1858.1080/0.0.1920.1040@0.0.1920.1040" timestamp="1677306498270" />
+    <state x="774" y="424" key="publish.login" timestamp="1677306302702">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="774" y="424" key="publish.login/3840.0.1920.1040/1920.0.1858.1080/0.0.1920.1040@0.0.1920.1040" timestamp="1677306302702" />
   </component>
 </project>

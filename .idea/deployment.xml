@@ -5,7 +5,7 @@
       <paths name="yzf@172.21.114.107:22 password (1)">
         <serverdata>
           <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/data/yzf/pacingpseudo" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
