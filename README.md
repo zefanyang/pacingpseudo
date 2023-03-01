@@ -33,7 +33,7 @@ We summarize results in DSC and HD95. DSC is measured in percentages (%) and HD9
 
 Below are the results of five-fold validation. Specifically,  in each fold, we first compute the average score of each anatomy over patients, which results in $K$ values. $K$ is the number of anatomies. Then we compute the average of these $K$ values. Since we have 5 folds, we have 5 average values of this kind. The overall average calculate the average value over 5 folds.
 
-#### Experiments on CHAOS T1
+Displayed below are experimental results on CHAOS T1.
 
 <center><b>DSC results on CHAOS T1</b></center>
 
@@ -50,3 +50,14 @@ Below are the results of five-fold validation. Specifically,  in each fold, we f
 | Baseline            |        |        |        |        |        |                 |
 | PacingPseudo (ours) |        |        |        |        |        |                 |
 | Fully-supervised    |        |        |        |        |        |                 |
+
+### Citation
+
+```latex
+@article{yang2022non,
+  title={Non-Iterative Scribble-Supervised Learning with Pacing Pseudo-Masks for Medical Image Segmentation},
+  author={Yang, Zefan and Lin, Di and Ni, Dong and Wang, Yi},
+  journal={arXiv preprint arXiv:2210.10956},
+  year={2022}
+}
+```
