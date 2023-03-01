@@ -31,12 +31,22 @@ We train three models for comparison. They are the baseline model, our pacingpse
 
 We summarize results in DSC and HD95. DSC is measured in percentages (%) and HD95 is measured in millimeters (mm). Higher is better for DSC and lower is better for HD95.
 
-Below are the results of five-fold validation. Specifically,  we first compute the average score of each anatomy over patients, which results in $K$ values. $K$ is the number of anatomies. Then we compute the average of these $K$ values. This is the value listed in the table.
+Below are the results of five-fold validation. Specifically,  in each fold, we first compute the average score of each anatomy over patients, which results in $K$ values. $K$ is the number of anatomies. Then we compute the average of these $K$ values. Since we have 5 folds, we have 5 average values of this kind. The overall average calculate the average value over 5 folds.
 
-**Experiments on CHAOS T1**
+#### Experiments on CHAOS T1
 
-| Models              | DSC  | HD95 |
-| ------------------- | ---- | ---- |
-| Baseline            |      |      |
-| PacingPseudo (ours) |      |      |
-| Fully-supervised    |      |      |
+<center><b>DSC results on CHAOS T1</b></center>
+
+| Models              | Fold 0 | Fold 1 | Fold 2 | Fold 3 | Fold 4 | Overall Average |
+| ------------------- | ------ | ------ | ------ | ------ | ------ | --------------- |
+| Baseline            |        |        |        |        |        |                 |
+| PacingPseudo (ours) |        |        |        |        |        |                 |
+| Fully-supervised    |        |        |        |        |        |                 |
+
+<center><b>HD95 results on CHAOS T1</b></center>
+
+| Models              | Fold 0 | Fold 1 | Fold 2 | Fold 3 | Fold 4 | Overall Average |
+| ------------------- | ------ | ------ | ------ | ------ | ------ | --------------- |
+| Baseline            |        |        |        |        |        |                 |
+| PacingPseudo (ours) |        |        |        |        |        |                 |
+| Fully-supervised    |        |        |        |        |        |                 |
