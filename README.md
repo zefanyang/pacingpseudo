@@ -24,10 +24,19 @@ We train three models for comparison. They are the baseline model, our pacingpse
 
 **train_chaos.py** contains program for traning the baseline model and pacingpseudo model. **upperbound_chaos.py** is for training the fully-supervised model. At the end of each training epoch, we compute Dice similarity coefficients on the validation dataset and plot them using TensorBoard.
 
-
-
 **Inference.py** is designed to compute evaluation metrics given a model parameter checkpoint. We use the final checkpoint in our experiments. The metrics includes the Dice similarity coefficients (DSC) and the 95-*th* percentile of Hausdorff distance (HD95). Roughly speaking, DSC quantifies relative overlap and HD95 quantifies boundary distance. Here is a lecture on [Hausdorff distance between convex polygons](http://cgm.cs.mcgill.ca/~godfried/teaching/cg-projects/98/normand/main.html).
 
 
 ### Results
 
+We summarize results in DSC and HD95. DSC is measured in percentages (%) and HD95 is measured in millimeters (mm). Higher is better for DSC and lower is better for HD95.
+
+Below are the results of five-fold validation. Specifically,  we first compute the average score of each anatomy over patients, which results in $K$ values. $K$ is the number of anatomies. Then we compute the average of these $K$ values. This is the value listed in the table.
+
+**Experiments on CHAOS T1**
+
+| Models              | DSC  | HD95 |
+| ------------------- | ---- | ---- |
+| Baseline            |      |      |
+| PacingPseudo (ours) |      |      |
+| Fully-supervised    |      |      |
