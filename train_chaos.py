@@ -30,11 +30,11 @@ parser.add_argument('--seed', type=int, default=1)
 parser.add_argument('--dataset', type=str, default='chaos',
                     help='dataset name')
 
-parser.add_argument('--root', type=str, default='./outputs/CHAOS',
+parser.add_argument('--root', type=str, default='./outputs/chaos',
                     help='root directory')
 
 parser.add_argument('--session', type=str, default='Control',
-                    choices=['Control', 'Experiment', 'Ablation', 'AblationAugm', 'AblationDetach', 'AblationMB'],
+                    choices=['Control', 'Experiment'],
                     help='session name')
 
 parser.add_argument('--tag', type=str, required=True,
@@ -108,12 +108,12 @@ parser.add_argument('--lr_decay', type=str, default='poly', choices=['linear', '
 parser.add_argument('--wd', type=float, default=0.0003, choices=[0.0003, 0.0001, 0.0005],
                     help='weight decay')
 
-parser.add_argument('--ckp_interval', type=int, default=100, choices=[40, 100],
+parser.add_argument('--ckp_interval', type=int, default=10000,
                     help='interval of saving checkpoints')
 
 ## Baseline plus options
 ## Entropy minimization
-parser.add_argument('--do_loss_ent', action='store_true', default=True,
+parser.add_argument('--do_loss_ent', action='store_true', default=False,
                     help='whether to use entropy minimization loss')
 
 parser.add_argument('--loss_ent_weight', type=float, default=1.,
@@ -402,7 +402,7 @@ def train_interface(args):
         valdice[curr_epoch] = avg_all
 
         # Save checkpoints every 10 epochs
-        if curr_epoch % args.ckp_interval == 0 or curr_epoch == args.epoch-1:
+        if curr_epoch+1 % args.ckp_interval == 0 or curr_epoch+1 == args.epoch:
             torch.save(model.state_dict(), os.path.join(args.child, 'ckps', 'ckp_{:d}.pth'.format(curr_epoch)))
 
         # Log best checkpoint
@@ -438,7 +438,8 @@ def train_main():
     torch.backends.cudnn.benchmark = False  # deterministically select an algorithm
 
     # Make run directory
-    args.child = os.path.join(args.root, args.modality, args.session, f'{args.session}-{time.strftime("%H-%M-%S-%m%d")}-fold{args.fold}-{args.tag}')
+    args.child = os.path.join(os.path.join(args.root, args.modality), args.session,
+                              f'{args.session}-{time.strftime("%H-%M-%S-%m%d")}-fold{args.fold}-{args.tag}')
     os.makedirs(args.child, exist_ok=False)
     os.makedirs(os.path.join(args.child, 'ckps'), exist_ok=True)
     shutil.copy(sys.argv[0], os.path.join(args.child, sys.argv[0].split('/')[-1]))

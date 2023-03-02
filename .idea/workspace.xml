@@ -1,9 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="2f56e031-1ce4-4b4f-afa8-c2f109cd2201" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/datasets/augmentations.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/losses/losses.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_chaos.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_chaos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upper_bound_chaos.py" beforeDir="false" afterPath="$PROJECT_DIR$/upper_bound_chaos.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +44,86 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/upper_bound_chaos.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\pacingpseudo\losses" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.train_chaost1_upperb_fold0">
+    <configuration name="train_chaost1_bs_fold0" type="PythonConfigurationType" factoryName="Python">
+      <module name="pacingpseudo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="sftp://yzf@172.21.114.143:22/home/yzf/Documents/ENTER/envs/pacedpseudo/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train_chaos.py" />
+      <option name="PARAMETERS" value="--gpu=0 --session=Control --tag=baseline-fold0 --fold=0 --modality=t1" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="train_chaost1_pacingp_fold0" type="PythonConfigurationType" factoryName="Python">
+      <module name="pacingpseudo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="sftp://yzf@172.21.114.143:22/home/yzf/Documents/ENTER/envs/pacedpseudo/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train_chaos.py" />
+      <option name="PARAMETERS" value="--gpu=1 --session=Experiment --tag=pacingpseudo-fold0 --fold=0 --modality=t1 --do_loss_ent --do_decoder_consistency --do_aux_path --do_memory" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="train_chaost1_upperb_fold0" type="PythonConfigurationType" factoryName="Python">
+      <module name="pacingpseudo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="sftp://yzf@172.21.114.143:22/home/yzf/Documents/ENTER/envs/pacedpseudo/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/upper_bound_chaos.py" />
+      <option name="PARAMETERS" value="--gpu=2 --session=Upperbound --tag=upperbound-fold0 --fold=0 --modality=t1" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.train_chaost1_bs_fold0" />
+      <item itemvalue="Python.train_chaost1_pacingp_fold0" />
+      <item itemvalue="Python.train_chaost1_upperb_fold0" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -35,22 +135,73 @@
       <updated>1668261451166</updated>
       <workItem from="1668261453155" duration="2000" />
       <workItem from="1670835571254" duration="2000" />
-      <workItem from="1677306131351" duration="4134000" />
+      <workItem from="1677306131351" duration="14049000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Deployment" timestamp="1677593578241">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#Deployment/3840.0.1920.1040/1920.0.1858.1080/0.0.1920.1040@0.0.1920.1040" timestamp="1677593578241" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1677306486177">
+    <state x="1935" y="300" width="1092" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1677727498127">
+      <screen x="1920" y="0" width="1858" height="1080" />
+    </state>
+    <state x="1935" y="300" width="1092" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog/3840.0.1920.1040/1920.0.1858.1080/0.0.1920.1040@0.0.1920.1040" timestamp="1677727498127" />
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1677674047244">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/3840.0.1920.1040/1920.0.1858.1080/0.0.1920.1040@0.0.1920.1040" timestamp="1677306486177" />
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/3840.0.1920.1040/1920.0.1858.1080/0.0.1920.1040@0.0.1920.1040" timestamp="1677674047244" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1677727409737">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/3840.0.1920.1040/1920.0.1858.1080/0.0.1920.1040@0.0.1920.1040" timestamp="1677727409737" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1677726864215">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/3840.0.1920.1040/1920.0.1858.1080/0.0.1920.1040@0.0.1920.1040" timestamp="1677726864215" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1677726864215">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.center/3840.0.1920.1040/1920.0.1858.1080/0.0.1920.1040@0.0.1920.1040" timestamp="1677726864215" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1677726864215">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.left/3840.0.1920.1040/1920.0.1858.1080/0.0.1920.1040@0.0.1920.1040" timestamp="1677726864215" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1677726864215">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/3840.0.1920.1040/1920.0.1858.1080/0.0.1920.1040@0.0.1920.1040" timestamp="1677726864215" />
+    <state width="1877" height="296" key="GridCell.Tab.1.bottom" timestamp="1677725143669">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="296" key="GridCell.Tab.1.bottom/3840.0.1920.1040/1920.0.1858.1080/0.0.1920.1040@0.0.1920.1040" timestamp="1677725143669" />
+    <state width="1877" height="296" key="GridCell.Tab.1.center" timestamp="1677725143668">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="296" key="GridCell.Tab.1.center/3840.0.1920.1040/1920.0.1858.1080/0.0.1920.1040@0.0.1920.1040" timestamp="1677725143668" />
+    <state width="1877" height="296" key="GridCell.Tab.1.left" timestamp="1677725143668">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="296" key="GridCell.Tab.1.left/3840.0.1920.1040/1920.0.1858.1080/0.0.1920.1040@0.0.1920.1040" timestamp="1677725143668" />
+    <state width="1877" height="296" key="GridCell.Tab.1.right" timestamp="1677725143668">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="296" key="GridCell.Tab.1.right/3840.0.1920.1040/1920.0.1858.1080/0.0.1920.1040@0.0.1920.1040" timestamp="1677725143668" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1677306500512">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -67,5 +218,21 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="774" y="424" key="publish.login/3840.0.1920.1040/1920.0.1858.1080/0.0.1920.1040@0.0.1920.1040" timestamp="1677593596394" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/inference.py</url>
+          <line>5</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/pacingpseudo$train_chaos_fold0.coverage" NAME="train_chaos_fold0 Coverage Results" MODIFIED="1677725173625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pacingpseudo$train_chaost1_pacingp_fold0.coverage" NAME="train_chaost1_pacingp_fold0 Coverage Results" MODIFIED="1677726345429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pacingpseudo$train_chaost1_upperb_fold0.coverage" NAME="train_chaost1_upperb_fold0 Coverage Results" MODIFIED="1677727503268" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

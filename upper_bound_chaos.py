@@ -29,9 +29,9 @@ parser.add_argument('--seed', type=int, default=1)
 parser.add_argument('--dataset', type=str, default='chaos',
                     help='dataset name')
 
-parser.add_argument('--root', type=str, default='./outputs/CHAOS')
+parser.add_argument('--root', type=str, default='./outputs/chaos')
 
-parser.add_argument('--session', type=str, default='UpperBound')
+parser.add_argument('--session', type=str, default='Upperbound')
 
 parser.add_argument('--tag', type=str, required=True,
                     help='experiment name')
@@ -78,7 +78,7 @@ parser.add_argument('--elab_end_points', type=bool, default=True,
                     help='whether to elaborate end points')
 
 ## Optimizer
-parser.add_argument('--loss_dice', action='store_true', default=False,
+parser.add_argument('--loss_dice', action='store_true', default=True,
                     help='whether to use Dice loss')
 
 parser.add_argument('--ignored_index', type=int, default=5,
@@ -253,7 +253,7 @@ def train_main():
     torch.backends.cudnn.benchmark = False  # deterministically select an algorithm
 
     # Make run directory
-    args.child = os.path.join(args.root, args.modality, args.session,
+    args.child = os.path.join(os.path.join(args.root, args.modality), args.session,
                               f'{args.session}-{time.strftime("%H-%M-%S-%m%d")}-fold{args.fold}-{args.tag}')
     os.makedirs(args.child, exist_ok=False)
     os.makedirs(os.path.join(args.child, 'ckps'), exist_ok=True)

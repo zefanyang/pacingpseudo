@@ -20,9 +20,11 @@ The dataloaders for augmenting and loading images for network learning is stored
 
 We train three models for comparison. They are the baseline model, our pacingpseudo model, and the fully-supervised model. The baseline is the UNet backbone penalized by the partial cross entropy loss. Our pacingpseudo uses the siamese architecture to implement the consistency training. Details are described in the paper [[arXiv]](https://arxiv.org/pdf/2210.10956.pdf). The fullly-supervised model is the UNet trained with the cross-entropy loss and Dice loss.
 
-### Training and Inference
+### Training
 
 **train_chaos.py** contains program for traning the baseline model and pacingpseudo model. **upperbound_chaos.py** is for training the fully-supervised model. At the end of each training epoch, we compute Dice similarity coefficients on the validation dataset and plot them using TensorBoard.
+
+### Inference
 
 **Inference.py** is designed to compute evaluation metrics given a model parameter checkpoint. We use the final checkpoint in our experiments. The metrics includes the Dice similarity coefficients (DSC) and the 95-*th* percentile of Hausdorff distance (HD95). Roughly speaking, DSC quantifies relative overlap and HD95 quantifies boundary distance. Here is a lecture on [Hausdorff distance between convex polygons](http://cgm.cs.mcgill.ca/~godfried/teaching/cg-projects/98/normand/main.html).
 
@@ -31,7 +33,7 @@ We train three models for comparison. They are the baseline model, our pacingpse
 
 We summarize results in DSC and HD95. DSC is measured in percentages (%) and HD95 is measured in millimeters (mm). Higher is better for DSC and lower is better for HD95.
 
-Below are the results of five-fold validation. Specifically,  in each fold, we first compute the average score of each anatomy over patients, which results in $K$ values. $K$ is the number of anatomies. Then we compute the average of these $K$ values. Since we have 5 folds, we have 5 average values of this kind. The overall average calculate the average value over 5 folds.
+Below are the results of five-fold validation. Specifically,  in each fold, we first compute the average score of each anatomy over patients, which results in $K$ values. $K$ is the number of anatomies. Then we compute the average of these $K$ values. Since there are 5 folds, we have 5 average values of this kind. The overall average calculates the average value over 5 folds.
 
 Displayed below are experimental results on CHAOS T1.
 
