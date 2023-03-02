@@ -22,7 +22,43 @@ We train three models for comparison. They are the baseline model, our pacingpse
 
 ### Training
 
-**train_chaos.py** contains program for traning the baseline model and pacingpseudo model. **upperbound_chaos.py** is for training the fully-supervised model. At the end of each training epoch, we compute Dice similarity coefficients on the validation dataset and plot them using TensorBoard.
+**train_chaos.py** contains program for training the baseline model and pacingpseudo model. **upperbound_chaos.py** is for training the fully-supervised model. At the end of each training epoch, we compute Dice similarity coefficients on the validation dataset and plot them using TensorBoard.
+
+To run the training programs, we have to input configuration parameters. Below is the command line for learning the baseline model on CHAOS T1.
+
+```
+python train_chaos.py --gpu=0 --session=Control --tag=baseline-fold0 --fold=0 --modality=t1
+```
+
+The pacingpseduo model needs additional configurations. Its training command line is as follows.
+
+```
+python train_chaos.py --gpu=0 --session=Experiment --tag=pacingpseudo-fold0 --fold=0 --modality=t1 --do_loss_ent --do_decoder_consistency --do_aux_path --do_memory
+```
+
+The upperbound model uses **upperbound_chaos.py** to train. Below is the command line to run **upperbound_chaos.py**.
+
+```
+python upperbound_chaos.py --gpu=0 --session=Upperbound --tag=upperbound-fold0 --fold=0 --modality=t1
+```
+
+
+
+Training outputs are stored in **./outputs**. They include logging files, model checkpoints, and tensorboard files.
+
+Tensorboard files monitor loss values, validation results, intermediate predictions during training. The following command calls the tensorboard interface.
+
+```
+tensorboard --logdir=./outputs --port=6007 --bind_all
+```
+
+Then, on your browser, type `localhost:6007` to watch the interface.
+
+<center><b>Validation Results on CHAOS T1</b></center>
+
+![tensorboard](D:\pacingpseudo\images\tensorboard_chaost1.PNG)
+
+
 
 ### Inference
 
@@ -31,7 +67,7 @@ We train three models for comparison. They are the baseline model, our pacingpse
 
 ### Results
 
-We summarize results in DSC and HD95. DSC is measured in percentages (%) and HD95 is measured in millimeters (mm). Higher is better for DSC and lower is better for HD95.
+We summarize results in DSC and HD95. HD95 is measured in millimeters (mm). Higher is better for DSC and lower is better for HD95.
 
 Below are the results of five-fold validation. Specifically,  in each fold, we first compute the average score of each anatomy over patients, which results in $K$ values. $K$ is the number of anatomies. Then we compute the average of these $K$ values. Since there are 5 folds, we have 5 average values of this kind. The overall average calculates the average value over 5 folds.
 
@@ -41,17 +77,17 @@ Displayed below are experimental results on CHAOS T1.
 
 | Models              | Fold 0 | Fold 1 | Fold 2 | Fold 3 | Fold 4 | Overall Average |
 | ------------------- | ------ | ------ | ------ | ------ | ------ | --------------- |
-| Baseline            |        |        |        |        |        |                 |
-| PacingPseudo (ours) |        |        |        |        |        |                 |
-| Fully-supervised    |        |        |        |        |        |                 |
+| Baseline            | 0.3452 |        |        |        |        |                 |
+| PacingPseudo (ours) | 0.5633 |        |        |        |        |                 |
+| Fully-supervised    | 0.5632 |        |        |        |        |                 |
 
 <center><b>HD95 results on CHAOS T1</b></center>
 
 | Models              | Fold 0 | Fold 1 | Fold 2 | Fold 3 | Fold 4 | Overall Average |
 | ------------------- | ------ | ------ | ------ | ------ | ------ | --------------- |
-| Baseline            |        |        |        |        |        |                 |
+| Baseline            | 60.79  |        |        |        |        |                 |
 | PacingPseudo (ours) |        |        |        |        |        |                 |
-| Fully-supervised    |        |        |        |        |        |                 |
+| Fully-supervised    | 16.29  |        |        |        |        |                 |
 
 ### Citation
 

@@ -104,7 +104,7 @@ parser.add_argument('--lr_decay', type=str, default='poly', choices=['linear', '
 parser.add_argument('--wd', type=float, default=0.0003,
                     help='weight decay')
 
-parser.add_argument('--ckp_interval', type=int, default=40, choices=[10, 40, 80,],
+parser.add_argument('--ckp_interval', type=int, default=10000,
                     help='interval of saving checkpoints')
 
 def train_interface(args):
@@ -219,7 +219,7 @@ def train_interface(args):
         valdice[curr_epoch] = avg_all
 
         # Save checkpoints every 10 epochs
-        if curr_epoch % args.ckp_interval == 0 or curr_epoch == args.epoch-1:
+        if curr_epoch+1 % args.ckp_interval == 0 or curr_epoch+1 == args.epoch:
             torch.save(model.state_dict(), os.path.join(args.child, 'ckps', 'ckp_{:d}.pth'.format(curr_epoch)))
 
         if avg_all > best_avg:
