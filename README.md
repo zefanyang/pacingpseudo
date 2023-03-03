@@ -56,13 +56,19 @@ Then, on your browser, type `localhost:6007` to watch the interface.
 
 <center><b>Validation Results on CHAOS T1</b></center>
 
-![tensorboard](D:\pacingpseudo\images\tensorboard_chaost1.PNG)
+![tensorboard](.\images\tensorboard_chaost1.PNG)
 
 
 
 ### Inference
 
 **Inference.py** is designed to compute evaluation metrics given a model parameter checkpoint. We use the final checkpoint in our experiments. The metrics includes the Dice similarity coefficients (DSC) and the 95-*th* percentile of Hausdorff distance (HD95). Roughly speaking, DSC quantifies relative overlap and HD95 quantifies boundary distance. Here is a lecture on [Hausdorff distance between convex polygons](http://cgm.cs.mcgill.ca/~godfried/teaching/cg-projects/98/normand/main.html).
+
+The following command uses the pacingpseduo model to inference validation metrics. We load model parameters at the final checkpoint by default.
+
+```
+python inference.py --gpu=0 --dataset=chaost1 --fold=0 --checkpoint_file=./outputs/chaos/t1/Experiment/Experiment-11-05-48-0302-fold0-pacingpseudo-fold0
+```
 
 
 ### Results
@@ -77,17 +83,17 @@ Displayed below are experimental results on CHAOS T1.
 
 | Models              | Fold 0 | Fold 1 | Fold 2 | Fold 3 | Fold 4 | Overall Average |
 | ------------------- | ------ | ------ | ------ | ------ | ------ | --------------- |
-| Baseline            | 0.3452 |        |        |        |        |                 |
-| PacingPseudo (ours) | 0.5633 |        |        |        |        |                 |
-| Fully-supervised    | 0.5632 |        |        |        |        |                 |
+| Baseline            | 0.3452 | 0.3732 |        |        |        |                 |
+| PacingPseudo (ours) | 0.5633 | 0.6583 |        |        |        |                 |
+| Fully-supervised    | 0.5632 | 0.6162 |        |        |        |                 |
 
 <center><b>HD95 results on CHAOS T1</b></center>
 
 | Models              | Fold 0 | Fold 1 | Fold 2 | Fold 3 | Fold 4 | Overall Average |
 | ------------------- | ------ | ------ | ------ | ------ | ------ | --------------- |
-| Baseline            | 60.79  |        |        |        |        |                 |
-| PacingPseudo (ours) |        |        |        |        |        |                 |
-| Fully-supervised    | 16.29  |        |        |        |        |                 |
+| Baseline            | 60.79  | 74.24  |        |        |        |                 |
+| PacingPseudo (ours) | 17.20  | 17.96  |        |        |        |                 |
+| Fully-supervised    | 16.29  | 25.04  |        |        |        |                 |
 
 ### Citation
 
