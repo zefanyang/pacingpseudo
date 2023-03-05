@@ -2,7 +2,7 @@
 
 This repo contains source code for the scribble-supervised learning paper: **Non-iterative Scribble-Supervised Learning for Medical Image Segmentation.** October, 2022. [[arXiv]](https://arxiv.org/pdf/2210.10956.pdf)
 
-### Data information
+### Datasets
 
 | Dataset                                                      | Image Modality          | Target Antomy                               | Scribble                                                     | #Images | Median Spacing          | Center-Crop Size |
 | ------------------------------------------------------------ | ----------------------- | ------------------------------------------- | ------------------------------------------------------------ | ------- | ----------------------- | ---------------- |
@@ -10,11 +10,17 @@ This repo contains source code for the scribble-supervised learning paper: **Non
 | **ACDC** [[challenge website]](https://www.creatis.insa-lyon.fr/Challenge/acdc/databases.html) | Cine-MRI                | Right ventricle, Myocardium, Left ventricle | Manual [[download link]](https://vios-s.github.io/multiscale-adversarial-attention-gates/data) | 1,902   | 1.51$\times$1.51 mm$^2$ | 224$\times$224   |
 | **LVSC** [[challenge website]](https://www.cardiacatlas.org/challenges/lv-segmentation-challenge/) | MRI '2D+time'           | Myocardium                                  | Artificial                                                   | 29,086  | 1.48$\times$1.48 mm$^2$ | 256$\times$256   |
 
-### Data
+### Data Preparation
 
-We use five-fold validation to evaluate performance. Images along with five-fold validation text files are stored in **./data/chaos/train_test_split/data_2d** and **./data/chaos/train_test_split/five_fold_split** respectively. 
+Take CHAOS T1 as an example. The following steps transform raw data for training.
 
-The dataloaders for augmenting and loading images for network learning is stored in **./datasets/chaos/chaos_dataset.py**.
+1. Resample pixel sizes to 1.62$\times$1.62mm$^2$, and then crop or pad the axial view to 256$\times$256pixels.
+2. Save the 3D volumes slice by slice in .npz format. Each contains an image, label and scribble.
+3. Split slices into five folds at patient level and store split information in text files.
+
+Specifically, 2D images and five-fold validation text files are stored in **./data/chaos/train_test_split/data_2d** and **./data/chaos/train_test_split/five_fold_split** respectively. 
+
+Dataloaders for loading  and augmenting images for network learning is stored in **./datasets/chaos/chaos_dataset.py**.
 
 ### Model
 
@@ -83,17 +89,17 @@ Displayed below are experimental results on CHAOS T1.
 
 | Models              | Fold 0 | Fold 1 | Fold 2 | Fold 3 | Fold 4 | Overall Average |
 | ------------------- | ------ | ------ | ------ | ------ | ------ | --------------- |
-| Baseline            | 0.3452 | 0.3732 |        |        |        |                 |
-| PacingPseudo (ours) | 0.5633 | 0.6583 |        |        |        |                 |
-| Fully-supervised    | 0.5632 | 0.6162 |        |        |        |                 |
+| Baseline            | 0.3452 | 0.3732 | 0.4149 | 0.4578 | 0.4234 | 0.4029          |
+| PacingPseudo (ours) | 0.5633 | 0.6583 | 0.6751 |        |        |                 |
+| Fully-supervised    | 0.5632 | 0.6162 | 0.6774 | 0.7662 | 0.7743 | 0.6795          |
 
 <center><b>HD95 results on CHAOS T1</b></center>
 
 | Models              | Fold 0 | Fold 1 | Fold 2 | Fold 3 | Fold 4 | Overall Average |
 | ------------------- | ------ | ------ | ------ | ------ | ------ | --------------- |
-| Baseline            | 60.79  | 74.24  |        |        |        |                 |
-| PacingPseudo (ours) | 17.20  | 17.96  |        |        |        |                 |
-| Fully-supervised    | 16.29  | 25.04  |        |        |        |                 |
+| Baseline            | 60.79  | 74.24  | 41.51  | 34.67  | 48.36  | 51.91           |
+| PacingPseudo (ours) | 17.20  | 17.96  | 12.11  |        |        |                 |
+| Fully-supervised    | 16.29  | 25.04  | 12.86  | 9.55   | 9.09   | 14.566          |
 
 ### Citation
 
