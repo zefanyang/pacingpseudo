@@ -63,7 +63,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/inference.py" />
-      <option name="PARAMETERS" value="--gpu=3 --dataset=chaost1 --fold=2 --checkpoint_file=./outputs/chaos/t1/Experiment/Experiment-11-47-38-0303-fold2-pacingpseudo-fold2" />
+      <option name="PARAMETERS" value="--gpu=3 --dataset=chaost1 --fold=4 --checkpoint_file=./outputs/chaos/t1/Experiment/Experiment-21-09-22-0305-fold4-pacingpseudo-fold4" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -177,7 +177,7 @@
       <updated>1668261451166</updated>
       <workItem from="1668261453155" duration="2000" />
       <workItem from="1670835571254" duration="2000" />
-      <workItem from="1677306131351" duration="32960000" />
+      <workItem from="1677306131351" duration="34513000" />
     </task>
     <servers />
   </component>
@@ -200,10 +200,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#Deployment/3840.0.1920.1040/1920.0.1858.1080/0.0.1920.1040@0.0.1920.1040" timestamp="1677593578241" />
-    <state x="8" y="125" width="1546" height="762" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1678021827528">
+    <state x="8" y="125" width="1546" height="762" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1678071510953">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="8" y="125" width="1546" height="762" key="#com.intellij.execution.impl.EditConfigurationsDialog/3840.0.1920.1040/1920.0.1858.1080/0.0.1920.1040@0.0.1920.1040" timestamp="1678021827528" />
+    <state x="8" y="125" width="1546" height="762" key="#com.intellij.execution.impl.EditConfigurationsDialog/3840.0.1920.1040/1920.0.1858.1080/0.0.1920.1040@0.0.1920.1040" timestamp="1678071510953" />
     <state x="1935" y="300" key="#com.intellij.execution.impl.EditConfigurationsDialog/3840.0.1920.1040/1920.0.1858.1080/0.0.1920.1040@1920.0.1858.1080" timestamp="1677760169500" />
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1677674047244">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -213,25 +213,25 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/3840.0.1920.1040/1920.0.1858.1080/0.0.1920.1040@0.0.1920.1040" timestamp="1677740881117" />
-    <state width="1877" height="605" key="GridCell.Tab.0.bottom" timestamp="1678021828487">
+    <state width="1877" height="605" key="GridCell.Tab.0.bottom" timestamp="1678071490404">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="605" key="GridCell.Tab.0.bottom/3840.0.1920.1040/1920.0.1858.1080/0.0.1920.1040@0.0.1920.1040" timestamp="1678021828487" />
+    <state width="1877" height="605" key="GridCell.Tab.0.bottom/3840.0.1920.1040/1920.0.1858.1080/0.0.1920.1040@0.0.1920.1040" timestamp="1678071490404" />
     <state width="1815" height="326" key="GridCell.Tab.0.bottom/3840.0.1920.1040/1920.0.1858.1080/0.0.1920.1040@1920.0.1858.1080" timestamp="1677808477798" />
-    <state width="1877" height="605" key="GridCell.Tab.0.center" timestamp="1678021828487">
+    <state width="1877" height="605" key="GridCell.Tab.0.center" timestamp="1678071490404">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="605" key="GridCell.Tab.0.center/3840.0.1920.1040/1920.0.1858.1080/0.0.1920.1040@0.0.1920.1040" timestamp="1678021828487" />
+    <state width="1877" height="605" key="GridCell.Tab.0.center/3840.0.1920.1040/1920.0.1858.1080/0.0.1920.1040@0.0.1920.1040" timestamp="1678071490404" />
     <state width="1815" height="326" key="GridCell.Tab.0.center/3840.0.1920.1040/1920.0.1858.1080/0.0.1920.1040@1920.0.1858.1080" timestamp="1677808477798" />
-    <state width="1877" height="605" key="GridCell.Tab.0.left" timestamp="1678021828487">
+    <state width="1877" height="605" key="GridCell.Tab.0.left" timestamp="1678071490404">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="605" key="GridCell.Tab.0.left/3840.0.1920.1040/1920.0.1858.1080/0.0.1920.1040@0.0.1920.1040" timestamp="1678021828487" />
+    <state width="1877" height="605" key="GridCell.Tab.0.left/3840.0.1920.1040/1920.0.1858.1080/0.0.1920.1040@0.0.1920.1040" timestamp="1678071490404" />
     <state width="1815" height="326" key="GridCell.Tab.0.left/3840.0.1920.1040/1920.0.1858.1080/0.0.1920.1040@1920.0.1858.1080" timestamp="1677808477798" />
-    <state width="1877" height="605" key="GridCell.Tab.0.right" timestamp="1678021828487">
+    <state width="1877" height="605" key="GridCell.Tab.0.right" timestamp="1678071490404">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="605" key="GridCell.Tab.0.right/3840.0.1920.1040/1920.0.1858.1080/0.0.1920.1040@0.0.1920.1040" timestamp="1678021828487" />
+    <state width="1877" height="605" key="GridCell.Tab.0.right/3840.0.1920.1040/1920.0.1858.1080/0.0.1920.1040@0.0.1920.1040" timestamp="1678071490404" />
     <state width="1815" height="326" key="GridCell.Tab.0.right/3840.0.1920.1040/1920.0.1858.1080/0.0.1920.1040@1920.0.1858.1080" timestamp="1677808477798" />
     <state width="1877" height="500" key="GridCell.Tab.1.bottom" timestamp="1677741473538">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -269,7 +269,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/pacingpseudo$train_chaos_fold0.coverage" NAME="train_chaost1_bs Coverage Results" MODIFIED="1678010395457" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pacingpseudo$train_chaost1_pacingp_fold0.coverage" NAME="train_chaost1_pacingp Coverage Results" MODIFIED="1678010387987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/pacingpseudo$inferernce_chaost1.coverage" NAME="inferernce_chaost1 Coverage Results" MODIFIED="1678021828480" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pacingpseudo$inferernce_chaost1.coverage" NAME="inferernce_chaost1 Coverage Results" MODIFIED="1678071475689" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pacingpseudo$train_chaost1_pacingp__1_.coverage" NAME="train_chaost1_pacingp (1) Coverage Results" MODIFIED="1678021761183" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pacingpseudo$train_chaost1_upperb_fold0.coverage" NAME="train_chaost1_upperb Coverage Results" MODIFIED="1678010406650" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>

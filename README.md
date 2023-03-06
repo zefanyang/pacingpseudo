@@ -22,9 +22,30 @@ Specifically, 2D images and five-fold validation text files are stored in **./da
 
 Dataloaders for loading  and augmenting images for network learning is stored in **./datasets/chaos/chaos_dataset.py**.
 
+We upload **./data/chaos/train_test_split** in Google Drive [[here]](https://drive.google.com/file/d/1X5TadvQeRzRvP_-1gFz-Tm_LhVtjWoOe/view?usp=share_link). Download and unzip the data into your working directory for reproduction.
+
 ### Model
 
 We train three models for comparison. They are the baseline model, our pacingpseudo model, and the fully-supervised model. The baseline is the UNet backbone penalized by the partial cross entropy loss. Our pacingpseudo uses the siamese architecture to implement the consistency training. Details are described in the paper [[arXiv]](https://arxiv.org/pdf/2210.10956.pdf). The fullly-supervised model is the UNet trained with the cross-entropy loss and Dice loss.
+
+### Environment
+
+First, create and activate a virtual environment named `pacingpseudo` with `python 3.6`.
+
+```
+conda create -n pacingpseudo python=3.6
+```
+
+Then, install necessary packages as follows.
+
+````
+torch=1.7.1
+tensorboard=2.7.0
+numpy=1.19.5
+matplotlib=3.3.4
+medpy=0.4.0
+simpleitk=2.1.1
+````
 
 ### Training
 
@@ -76,6 +97,7 @@ The following command uses the pacingpseduo model to inference validation metric
 python inference.py --gpu=0 --dataset=chaost1 --fold=0 --checkpoint_file=./outputs/chaos/t1/Experiment/Experiment-11-05-48-0302-fold0-pacingpseudo-fold0
 ```
 
+Inference outputs are stored in **./outputs/inference**.
 
 ### Results
 
@@ -90,7 +112,7 @@ Displayed below are experimental results on CHAOS T1.
 | Models              | Fold 0 | Fold 1 | Fold 2 | Fold 3 | Fold 4 | Overall Average |
 | ------------------- | ------ | ------ | ------ | ------ | ------ | --------------- |
 | Baseline            | 0.3452 | 0.3732 | 0.4149 | 0.4578 | 0.4234 | 0.4029          |
-| PacingPseudo (ours) | 0.5633 | 0.6583 | 0.6751 |        |        |                 |
+| PacingPseudo (ours) | 0.5633 | 0.6583 | 0.6751 | 0.7030 | 0.7283 | 0.6656          |
 | Fully-supervised    | 0.5632 | 0.6162 | 0.6774 | 0.7662 | 0.7743 | 0.6795          |
 
 <center><b>HD95 results on CHAOS T1</b></center>
@@ -98,8 +120,10 @@ Displayed below are experimental results on CHAOS T1.
 | Models              | Fold 0 | Fold 1 | Fold 2 | Fold 3 | Fold 4 | Overall Average |
 | ------------------- | ------ | ------ | ------ | ------ | ------ | --------------- |
 | Baseline            | 60.79  | 74.24  | 41.51  | 34.67  | 48.36  | 51.91           |
-| PacingPseudo (ours) | 17.20  | 17.96  | 12.11  |        |        |                 |
-| Fully-supervised    | 16.29  | 25.04  | 12.86  | 9.55   | 9.09   | 14.566          |
+| PacingPseudo (ours) | 17.20  | 17.96  | 12.11  | 10.94  | 10.44  | 13.73           |
+| Fully-supervised    | 16.29  | 25.04  | 12.86  | 9.55   | 9.09   | 14.57           |
+
+The output data **./outputs** , including traning and inference outputs, are uploaded in Google Drive [[here]](https://drive.google.com/file/d/1c6jo41sdqmLIbtvD9Kc4ntHOrJyTk3FD/view?usp=share_link).
 
 ### Citation
 
