@@ -1,4 +1,5 @@
 import numpy as np
+from scipy import ndimage
 from skimage import morphology
 
 def generate_scribble_fn(lab, num_classes, ignored_index):
