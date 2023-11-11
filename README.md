@@ -128,10 +128,13 @@ The output data **./outputs** , including traning and inference outputs, are upl
 ### Citation
 
 ```latex
-@article{yang2022non,
-  title={Non-Iterative Scribble-Supervised Learning with Pacing Pseudo-Masks for Medical Image Segmentation},
+@article{yang2024non,
+  title={Non-iterative scribble-supervised learning with pacing pseudo-masks for medical image segmentation},
   author={Yang, Zefan and Lin, Di and Ni, Dong and Wang, Yi},
-  journal={arXiv preprint arXiv:2210.10956},
-  year={2022}
+  journal={Expert Systems with Applications},
+  volume={238},
+  pages={122024},
+  year={2024},
+  publisher={Elsevier}
 }
 ```
